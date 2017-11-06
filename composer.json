@@ -1,0 +1,13 @@
+{
+    "name": "vagrant/govau_uikit_theme",
+    "description": "Drupal 8 with govau uikit",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Yi Jiang",
+            "email": "yicjiang@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
