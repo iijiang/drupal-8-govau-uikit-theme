@@ -1,0 +1,64 @@
+// Style for tables.
+
+table {
+  margin: uikit-space(1) 0;
+  width: 100%;
+  font-size: .9em;
+  border-bottom: 2px solid $asea-purple;
+  caption {
+    text-align: left;
+    margin:1em 0;
+    font-weight: bold;
+    color: $asea-purple;
+  }
+  th, td {
+    text-align: left;
+    padding: .8em;
+    border:1px solid $asea-purple;
+    &:first-child {
+      border-left:none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  thead {
+    border-bottom: 2px solid $asea-purple;
+    border-top: 2px solid $asea-purple;
+  }
+  tbody {
+    background-color: #fff;
+    tr {
+      border-bottom: 1px solid #ccc;
+      vertical-align: top;
+      &:hover {
+        background:#f3eff7;
+      }
+    }
+    ul {
+      list-style: none;
+      position: relative;
+      padding-left: 1.1em !important;
+      li {
+        margin-bottom:.4em !important;
+        &:before {
+        content:'\f054';
+        font-family: FontAwesome;
+        position: absolute;
+        left: .2em;
+        font-size: .8em;
+        margin-top: .3em;
+        color:$asea-purple;
+        }
+      }
+    }
+  }
+  tr.table-total {
+    background-color: $asea-grey;
+    border-top: 2px solid $asea-purple;
+    font-weight: bold;
+  }
+  tfoot {
+
+  }
+}

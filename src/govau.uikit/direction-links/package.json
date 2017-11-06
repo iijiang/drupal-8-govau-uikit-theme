@@ -1,0 +1,128 @@
+{
+  "_from": "@gov.au/direction-links@^0.1.0",
+  "_id": "@gov.au/direction-links@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-ig4Nhpu9AjbPvnXUTJcJTLzplaY=",
+  "_location": "/@gov.au/direction-links",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@gov.au/direction-links@^0.1.0",
+    "name": "@gov.au/direction-links",
+    "escapedName": "@gov.au%2fdirection-links",
+    "scope": "@gov.au",
+    "rawSpec": "^0.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@gov.au/direction-links/-/direction-links-0.1.0.tgz",
+  "_shasum": "8a0e0d869bbd0236cfbe75d44c97094cbce995a6",
+  "_spec": "@gov.au/direction-links@^0.1.0",
+  "_where": "/Users/yijiang/uikit-starter",
+  "author": {
+    "name": "Commonwealth of Australia, DTA",
+    "email": "guides@digital.gov.au",
+    "url": "https://www.dta.gov.au/"
+  },
+  "bugs": {
+    "url": "https://github.com/govau/uikit/issues",
+    "email": "guides@digital.gov.au"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Dominik Wilkowski",
+      "email": "hi@dominik-wilkowski.com",
+      "url": "https://dominik-wilkowski.com/"
+    },
+    {
+      "name": "Simon Pascal Klein",
+      "email": "klepas@klepas.org",
+      "url": "http://klepas.org/"
+    }
+  ],
+  "dependencies": {
+    "@gov.au/body": "^0.1.0",
+    "@gov.au/core": "^0.1.0",
+    "@gov.au/pancake": "~1"
+  },
+  "deprecated": false,
+  "description": "Use direction links to link up and down within the DOM or back to a parent page.",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "npm-run-all": "^4.0.1",
+    "onchange": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": "^3.0.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "homepage": "http://guides.service.gov.au/design-guide/",
+  "keywords": [
+    "uikit",
+    "pancake",
+    "pancake-module",
+    "sass",
+    "scss",
+    "css",
+    "gov.au",
+    "Commonwealth of Australia",
+    "design guide",
+    "design system",
+    "up",
+    "down",
+    "left",
+    "right",
+    "direction links",
+    "links"
+  ],
+  "license": "MIT",
+  "name": "@gov.au/direction-links",
+  "pancake": {
+    "pancake-module": {
+      "version": "1.0.0",
+      "plugins": [
+        "@gov.au/pancake-sass"
+      ],
+      "sass": {
+        "path": "lib/sass/_module.scss",
+        "sass-versioning": true
+      }
+    }
+  },
+  "peerDependencies": {
+    "@gov.au/core": "^0.1.0",
+    "@gov.au/body": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govau/uikit.git"
+  },
+  "scripts": {
+    "build": "node ../../scripts/helper.js precompile compile",
+    "postinstall": "pancake",
+    "prepublish": "node ../../scripts/helper.js precompile publish",
+    "serve": "browser-sync start --server --startPath 'tests/site' --files 'tests/site/*.html, tests/site/*.css, tests/site/*.js'",
+    "test": "node ../../scripts/a11y.js",
+    "watch": "npm-run-all --parallel serve watch:*",
+    "watch:sass": "npm run build && onchange 'src/sass/*.scss' 'tests/site/*.scss' -- npm run build"
+  },
+  "version": "0.1.0",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">=0.12.0",
+        "npm": "^3.0.0"
+      },
+      "pkgid": "@gov.au/direction-links@0.1.0"
+    }
+  ]
+}

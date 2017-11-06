@@ -1,0 +1,8 @@
+// Overrides for tabs.
+
+.tabs {
+  &.primary {
+    padding-left: 0;
+    margin-top: uikit-space(1);
+  }
+}

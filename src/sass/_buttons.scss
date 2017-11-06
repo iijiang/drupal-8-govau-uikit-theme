@@ -1,0 +1,18 @@
+// Override for buttons.
+
+#content {
+  .views-exposed-form .button {
+    @extend .uikit-btn;
+  }
+}
+
+.uikit-btn {
+  background-color: #c0c2c3;
+  padding: 0.5em;
+  margin-top: 0.4em;
+  color: #000000;
+  &:hover {
+    background-color: #ffffff;
+  }
+}
+

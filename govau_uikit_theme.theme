@@ -1,0 +1,54 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\Core\Template;
+/* Preprocess functions for the Message Lab theme. */
+
+/**
+ *
+ * Implements hook_theme_suggestions_HOOK_alter
+ *
+ **/
+function asea_theme_preprocess_input__checkbox(&$variables) {
+  $variables['element']['#wrapped_label'] = TRUE;
+}
+
+
+function asea_theme_theme_suggestions_form_element_alter(&$suggestions, $variables) {
+  if($variables['element']['#type'] == 'checkbox') {
+    $suggestions[] = 'form_element__wrapped';
+  }
+}
+
+function asea_theme_preprocess_form_element__wrapped(&$variables) {
+  $variables['label']['#theme'] = 'form_element_label__open';
+  $variables['label_open'] = $variables['label'];
+  unset($variables['label']);
+  $variables['title'] = $variables['element']['#title'];
+}
+
+function asea_theme_theme_suggestions_form_element_label_alter(&$suggestions, &$vars) {
+  $request['type'] = $vars['element']['type']['type'];
+  if(!empty($request)) {
+    $suggestions[] = 'form_element_label__' . $request['type'];
+  }
+}
+
+function asea_theme_preprocess_block(&$variables) {
+  $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ * Ensure same block can render in the different behaviour.
+ */
+function asea_theme_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(array('block-', '-'), array('', '_'), $variables['attributes']['block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+}

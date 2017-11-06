@@ -1,0 +1,57 @@
+// Overrides for the Search block.
+.search  /* Top search bar */,
+.search-form /* Search bars on other pages */ {
+  .container-inline,
+  form {
+    position: relative;
+  }
+  .form-item {
+    margin: 0;
+  }
+  .form-actions {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 2px;
+  }
+  .search-input {
+    width: 100%;
+    padding-right: 3.4em;
+    border: 0px;
+    border-radius: $uikit-border-radius;
+    float: left;
+    text-indent: uikit-space(0.5);
+    line-height: 3.1em;
+    background-color: $search-input-background;
+  }
+  .button {
+    width: 3.2em;
+    height: 3.1em;
+    margin:2px 0 0 0 !important;
+    text-indent: -99em;
+    border: none;
+    transition: ease-in-out 0.1s background-color !important;
+    background: $search-background url('../img/search--white.svg') no-repeat center center;
+    background-size: 20px auto !important;
+    position: absolute;
+    right: 0;
+    &:hover, &:focus {
+      background-color: darken($search-background, 10%);
+    }
+  }
+  &.search-page-form .button {
+    right: 2px;
+    margin-top: 3px;
+  }
+}
+
+.search-page-form {
+  label {
+    display: block;
+  }
+}
+
+.search-help-link {
+  display: inline-block;
+  margin-top: uikit-space(0.5);
+}

@@ -1,0 +1,49 @@
+{% import _self as menus %}
+
+  {#We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+  TODO move all menu into one by menu_name.
+  #}
+
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+        {% if menu_level == 0 %}
+            <ul{{ attributes.addClass('uikit-link-list uikit-link-list--inline asea-top-nav js-nav-system') }}>
+            {% for item in items %}
+                {%
+                set classes = [
+                'js-nav-system__item',
+                ]
+                %}
+                <li{{ item.attributes.addClass(classes) }}>
+                    {% if item.below %}
+                    {% set title %}
+                        {{ item.title }} <i class="fa fa-chevron-down asea-fa"></i>
+                    {% endset %}
+                    {{ link(title, item.url,  { 'class':['js-nav-system__link']}) }}
+                        {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+                    {% else %}
+                        {{ link(item.title, item.url,  { 'class':['js-nav-system__link']}) }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+
+        {% else %}
+            <ul class="js-nav-system__subnav asea-top-sub-nav">
+            {% for item in items %}
+                {%
+                set classes = [
+                'js-nav-system__subnav__item',
+                ]
+                %}
+                <li{{ item.attributes.addClass(classes) }}>
+                    {{ link(item.title, item.url, { 'class':['js-nav-system__subnav__link']}) }}
+                </li>
+            {% endfor %}
+
+        {% endif %}
+        </ul>
+    {% endif %}
+{% endmacro %}

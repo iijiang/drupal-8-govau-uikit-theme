@@ -1,0 +1,58 @@
+// Overrides for the header.
+.uikit-body header {
+  //border-bottom: 4px solid $uikit-colour-Border;
+  a {
+    border: none;
+    &:hover, &:focus {
+      background-color: $uikit-colour-Hero;
+      color: #ffffff;
+    }
+    &.is-active {
+      background-color: #fff;
+      color: $uikit-colour-Hero;
+      font-weight: 700;
+      &:hover {
+        background-color: $uikit-colour-Hero;
+        color: #ffffff;
+      }
+    }
+  }
+  .asea-top-nav {
+    padding:0;
+    a {
+      padding:.5em;
+      display: block;
+    }
+    li {
+      margin:0;
+    }
+    ul.asea-top-sub-nav {
+      margin-top:0;
+    }
+  }
+
+  a.site-logo:hover,
+  a.site-logo:focus {
+    background-color: transparent;
+  }
+
+  .uikit-header-heading {
+    margin-top: uikit-space(0.4);
+  }
+  &.uikit-header {
+    padding: 0;
+    margin-bottom: .5em;
+  }
+  .asea-main-nav {
+    a.js-nav-system__link {
+      padding-bottom:.6em;
+      margin-bottom: -.7em;
+    }
+  }
+}
+
+.uikit-header.uikit-header--light {
+  background-color: transparent;
+  border-bottom: 4px solid $uikit-colour-Hero;
+  background-color: #fff;
+}

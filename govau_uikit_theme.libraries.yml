@@ -1,0 +1,31 @@
+font-awesome:
+  remote: https://fortawesome.github.io/Font-Awesome/
+  version: 4.5.0
+  license:
+    name: MIT
+    url: https://fortawesome.github.io/Font-Awesome/license/
+    gpl-compatible: true
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css: { type: external, minified: true }
+
+govau_uikit_theme-libraries:
+  css:
+    theme:
+      css/main.css: {}
+  js:
+    src/govau.uikit/animate/lib/js/module.js: {}
+    src/govau.uikit/accordion/lib/js/module.js: {}
+    #  File name without namespace asea to ensure it can be reusable.
+    js/jquery.matchHeight-min.js: {}
+    js/subnav-dropdown.js: {}
+    js/toggle-views.js: {}
+    #  Drupal Core already includes a build of Modernizr, but it doesn't detect what we need;
+    #  this build does our own detection while deliberately ignoring what Core already searches
+    #  for, so they don't step on each others' toes.
+    js/modernizr.min.js: { preprocess: 0, weight: -21, minified: true }
+
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.cookie

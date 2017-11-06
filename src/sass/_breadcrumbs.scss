@@ -1,0 +1,19 @@
+// Additional styles for breadcrumbs.
+
+.uikit-breadcrumbs {
+  padding-bottom: .7em;
+
+  li:last-child {
+    font-weight: bold;
+  }
+
+  a {
+    border-bottom: none;
+  }
+}
+
+#block-asea-theme-breadcrumbs {
+  width: 100%;
+  padding-left: $uikit-grid-12-gutter-width / 2;
+  padding-right: $uikit-grid-12-gutter-width / 2;
+}

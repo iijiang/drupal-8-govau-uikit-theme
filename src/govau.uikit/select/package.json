@@ -1,0 +1,123 @@
+{
+  "_from": "@gov.au/select@^0.1.0",
+  "_id": "@gov.au/select@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-y6p1EPUEiHscVT0JiYe9fI6SVTg=",
+  "_location": "/@gov.au/select",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@gov.au/select@^0.1.0",
+    "name": "@gov.au/select",
+    "escapedName": "@gov.au%2fselect",
+    "scope": "@gov.au",
+    "rawSpec": "^0.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@gov.au/select/-/select-0.1.0.tgz",
+  "_shasum": "cbaa7510f504887b1c553d098987bd7c8e925538",
+  "_spec": "@gov.au/select@^0.1.0",
+  "_where": "/Users/yijiang/uikit-starter",
+  "author": {
+    "name": "Commonwealth of Australia, DTA",
+    "email": "guides@digital.gov.au",
+    "url": "https://www.dta.gov.au/"
+  },
+  "bugs": {
+    "url": "https://github.com/govau/uikit/issues",
+    "email": "guides@digital.gov.au"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Dominik Wilkowski",
+      "email": "hi@dominik-wilkowski.com",
+      "url": "https://dominik-wilkowski.com/"
+    },
+    {
+      "name": "Simon Schwartz",
+      "email": "simon.schwartz0@gmail.com",
+      "url": "https://simonschwartz.github.io/"
+    }
+  ],
+  "dependencies": {
+    "@gov.au/core": "^0.1.0",
+    "@gov.au/pancake": "~1"
+  },
+  "deprecated": false,
+  "description": "The form select element for multiple options",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "npm-run-all": "^4.0.1",
+    "onchange": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": "^3.0.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "homepage": "http://guides.service.gov.au/design-guide/",
+  "keywords": [
+    "uikit",
+    "pancake",
+    "pancake-module",
+    "sass",
+    "scss",
+    "css",
+    "gov.au",
+    "Commonwealth of Australia",
+    "design guide",
+    "design system",
+    "select",
+    "select input"
+  ],
+  "license": "MIT",
+  "name": "@gov.au/select",
+  "pancake": {
+    "pancake-module": {
+      "version": "1.0.0",
+      "plugins": [
+        "@gov.au/pancake-sass"
+      ],
+      "sass": {
+        "path": "lib/sass/_module.scss",
+        "sass-versioning": true
+      }
+    }
+  },
+  "peerDependencies": {
+    "@gov.au/core": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govau/uikit.git"
+  },
+  "scripts": {
+    "build": "node ../../scripts/helper.js precompile compile",
+    "postinstall": "pancake",
+    "prepublish": "npm run test && node ../../scripts/helper.js precompile publish",
+    "serve": "browser-sync start --server --startPath 'tests/site' --files 'tests/site/*.html, tests/site/*.css, tests/site/*.js'",
+    "test": "node ../../scripts/helper.js test && node ../../scripts/a11y.js",
+    "watch": "npm-run-all --parallel serve watch:*",
+    "watch:js": "npm run build && onchange 'src/js/*.js' -- npm run build",
+    "watch:sass": "npm run build && onchange 'src/sass/*.scss' 'tests/site/*.scss' -- npm run build"
+  },
+  "version": "0.1.0",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "required": {
+        "node": ">=0.12.0",
+        "npm": "^3.0.0"
+      },
+      "pkgid": "@gov.au/select@0.1.0"
+    }
+  ]
+}

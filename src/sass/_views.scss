@@ -1,0 +1,103 @@
+/**
+ * Views style
+ */
+.view-toggle {
+  color: $uikit-colour-Background--50;
+  letter-spacing: uikit-space(0.3);
+
+  .fa-list, .fa-table {
+    cursor: pointer;
+
+    &.active {
+      color: #5b2b82;
+    }
+  }
+}
+
+.view-content {
+
+  .views-row {
+    margin-top: 2em;
+    padding-left: 1em;
+  }
+  &.grids-view { // View header button class to switch the view mode.
+    margin-left: -1%;
+    margin-right: -1%;
+
+    .views-row {
+      width: (100% - (2 * 1%));
+      padding-left: 0;
+
+      @include uikit-media(sm) {
+        width: (100% / 2 - (2 * 1%));
+      }
+
+      @include uikit-media(md) {
+        width: (100% / 2 - (2 * 1%));
+      }
+
+      @include uikit-media(lg) {
+        width: (100% / 3 - (2 * 1%));
+      }
+
+      background-color: #fff;
+      margin-left: 1%;
+      margin-right: 1%;
+      padding-bottom: 1.5em;
+      float: left;
+    }
+
+    .views-field {
+      padding: 0.5em;
+    }
+
+    .views-field-field-feature {
+      display: block;
+      padding:0;
+
+      img {
+        width: 100%;
+        padding:0;
+      }
+    }
+    .views-field-field-feature, .field--name-field-feature {
+      display: block;
+    }
+  }
+
+  .views-field {
+    padding-top:uikit-space(0.3);
+  }
+
+  //.views-row:nth-child(odd)  {
+  // background-color: white;
+  //}
+  //
+  //.views-row:nth-child(even)  {
+  //  background-color: grey;
+  //}
+
+  .views-row {
+    margin-top: 2em;
+  }
+
+  .views-field-field-feature, .field--name-field-feature {
+    display: none;
+  }
+
+  .views-field-field-date {
+    font-size: uikit-space(0.5);
+    color: $uikit-colour-Hero;
+  }
+
+  .views-field-title, .views-field-name {
+    font-size: uikit-space(0.8);
+    font-weight: bold;
+  }
+}
+
+section.uikit-accordion {
+  ul {
+    list-style: none;
+  }
+}

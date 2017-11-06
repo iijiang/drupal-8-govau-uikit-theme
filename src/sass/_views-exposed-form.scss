@@ -1,0 +1,45 @@
+// Overrides for Views Exposed Forms.
+
+.views-exposed-form {
+  margin-bottom: 1rem;
+
+  > .form--inline {
+    .form-item,
+    .form-actions {
+      width: 32.3333%;
+      margin: 0 1% 0 0;
+      float: left;
+      clear: none;
+    }
+
+    .form-actions {
+      margin-top: uikit-space(1.275);
+    }
+
+    html.flexbox & {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .form-item,
+      .form-actions {
+        margin-right: 1em;
+        float: none;
+        flex: 1 1 0;
+      }
+
+      .form-actions {
+        margin-right: 0;
+        padding-bottom: 1em;
+        flex: 0 0;
+
+        button,
+        [type=button],
+        [type=submit],
+        [type=reset] {
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}

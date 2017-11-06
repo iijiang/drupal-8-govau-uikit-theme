@@ -1,0 +1,112 @@
+{
+  "_from": "@gov.au/pancake-sass@^1.1.0",
+  "_id": "@gov.au/pancake-sass@1.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-LoMXY2fpfF8XcietXl7P6Rn5SV+i6LF20CPjiJoj6nrQ81qX1udHt6FzWklYle5r6jQvxZ6jZHNYLOiL2PcuRQ==",
+  "_location": "/@gov.au/pancake-sass",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@gov.au/pancake-sass@^1.1.0",
+    "name": "@gov.au/pancake-sass",
+    "escapedName": "@gov.au%2fpancake-sass",
+    "scope": "@gov.au",
+    "rawSpec": "^1.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@gov.au/header"
+  ],
+  "_resolved": "https://registry.npmjs.org/@gov.au/pancake-sass/-/pancake-sass-1.1.1.tgz",
+  "_shasum": "4913c58d7590aad3d66f0a82c6761bb9c75d6025",
+  "_spec": "@gov.au/pancake-sass@^1.1.0",
+  "_where": "/Users/yijiang/uikit-starter",
+  "author": {
+    "name": "Commonwealth of Australia, DTA",
+    "email": "guides@digital.gov.au",
+    "url": "https://www.dta.gov.au/"
+  },
+  "bugs": {
+    "url": "https://github.com/govau/pancake/issues",
+    "email": "guides@digital.gov.au"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Dominik Wilkowski",
+      "email": "hi@dominik-wilkowski.com",
+      "url": "https://dominik-wilkowski.com/"
+    }
+  ],
+  "dependencies": {
+    "@gov.au/pancake": "~1",
+    "autoprefixer": "6.7.6",
+    "babel-runtime": "6.23.0",
+    "node-sass": "4.5.3",
+    "postcss": "5.2.15"
+  },
+  "deprecated": false,
+  "description": "A Pancake plugin to compile sass files.",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "del": "^2.2.2",
+    "dirsum": "^0.1.1",
+    "jest-cli": "^19.0.2",
+    "onchange": "^3.2.1"
+  },
+  "engines": {
+    "npm": ">=3.0.0"
+  },
+  "files": [
+    "lib/*"
+  ],
+  "homepage": "https://github.com/govau/pancake",
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "\\.spec.js$",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
+  },
+  "keywords": [
+    "npm",
+    "flat",
+    "peerDependencies",
+    "gov.au",
+    "uikit",
+    "Commonwealth of Australia",
+    "design guide",
+    "design system",
+    "cli",
+    "pancake-plugin"
+  ],
+  "license": "MIT",
+  "main": "./lib/pancake.js",
+  "name": "@gov.au/pancake-sass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govau/pancake.git"
+  },
+  "scripts": {
+    "build": "npm run build:js",
+    "build:js": "babel src --out-dir lib --presets=es2015 --plugins=transform-runtime,transform-es2015-modules-commonjs",
+    "build:watch": "npm run build:js && jest --coverage",
+    "prepublish": "npm run build && npm run test",
+    "test": "exit 0",
+    "watch": "npm run build:watch && onchange 'src/*.js' '__tests__/*.js' -- npm run build:watch"
+  },
+  "version": "1.1.1"
+}

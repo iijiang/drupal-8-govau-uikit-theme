@@ -1,0 +1,37 @@
+name: Drupal 8 govau uikit theme
+type: theme
+description: Drupal 8 incorporates DTA's uikit.
+core: 8.x
+base theme: classy
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  primary_menu: 'Primary menu'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer_top: 'Footer Top'
+  footer_top_right: 'Footer Top Right'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'govau_uikit_theme/govau_uikit_theme-libraries'
+  - 'govau_uikit_theme/font-awesome'
+
+#Remove base css since we are overide a new one.
+stylesheets-remove:
+  - 'core/themes/classy/css/components/menu.css'
+  - 'core/themes/classy/css/components/item-list.css'
+#libraries-extend:
+
+#libraries-override:
+#  system/base: false
+
+# Remove individual stylesheets.
