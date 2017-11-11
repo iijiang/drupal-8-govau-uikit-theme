@@ -1,0 +1,27 @@
+{
+  "name": "drupal-8-govau-uikit-theme",
+  "version": "1.0.0",
+  "description": "Govau uikit drupal 8 theme",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://iijiang@github.com/iijiang/drupal-8-govau-uikit-theme.git"
+  },
+  "keywords": [
+    "drupal",
+    "theme"
+  ],
+  "author": "Yi Jiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iijiang/drupal-8-govau-uikit-theme/issues"
+  },
+  "homepage": "https://github.com/iijiang/drupal-8-govau-uikit-theme#readme"
+}

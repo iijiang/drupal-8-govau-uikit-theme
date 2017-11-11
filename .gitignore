@@ -3,5 +3,5 @@ config.codekit3
 css/*.map
 .DS_Store
 main.css.map
-
+node_modules/
 /vendor/
