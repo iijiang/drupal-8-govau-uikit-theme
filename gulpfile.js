@@ -24,7 +24,7 @@ var reportError = function(error) {
 
 // Sass processing
 gulp.task('sass', function() {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('src/sass/**/*.scss')
         .pipe($.sourcemaps.init())
         // Convert sass into css
         .pipe($.sass({
@@ -40,7 +40,7 @@ gulp.task('sass', function() {
         // Write sourcemaps
         .pipe($.sourcemaps.write())
         // Save css
-        .pipe(gulp.dest('styles'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -48,13 +48,13 @@ gulp.task('sass', function() {
 
 // process JS files and return the stream.
 gulp.task('js', function () {
-    return gulp.src('scripts/**/*.js')
-        .pipe(gulp.dest('scripts'));
+    return gulp.src('js/**/*.js')
+        .pipe(gulp.dest('js'));
 });
 
-// Optimize Images
+//Optimize Images
 gulp.task('images', function() {
-    return gulp.src('images/**/*')
+    return gulp.src('img/**/*')
         .pipe($.imagemin({
             progressive: true,
             interlaced: true,
@@ -67,7 +67,7 @@ gulp.task('images', function() {
 
 // JS hint
 gulp.task('jshint', function() {
-    return gulp.src('scripts/*.js')
+    return gulp.src('js/*.js')
         .pipe(reload({
             stream: true,
             once: true
@@ -83,7 +83,7 @@ gulp.task('jshint', function() {
 
 // Beautify JS
 gulp.task('beautify', function() {
-    gulp.src('scripts/*.js')
+    gulp.src('js/*.js')
         .pipe($.beautify({indentSize: 2}))
         .pipe(gulp.dest('scripts'))
         .pipe($.notify({
@@ -95,7 +95,7 @@ gulp.task('beautify', function() {
 
 // Compress JS
 gulp.task('compress', function() {
-    return gulp.src('scripts/*.js')
+    return gulp.src('js/*.js')
         .pipe($.sourcemaps.init())
         .pipe($.uglify())
         .pipe($.sourcemaps.write())
@@ -127,21 +127,21 @@ gulp.task('browser-sync', function() {
     //watch files
     var files = [
         'styles/main.css',
-        'scripts/**/*.js',
-        'images/**/*',
+        'js/**/*.js',
+        'img/**/*',
         'templates/**/*.twig'
     ];
     //initialize browsersync
     browserSync.init(files, {
-        proxy: "mysite.dev" // BrowserSync proxy, change to match your local environment
+        proxy: "ds2017.loc.gbuild.net" // BrowserSync proxy, change to match your local environment
     });
 });
 
 // Styleguide Generator with SC5: https://github.com/SC5/sc5-styleguide
 gulp.task('styleguide:generate', function() {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(styleguide.generate({
-            title: 'Monoset Styleguide',
+            title: 'my Styleguide',
             overviewPath: 'README.md',
             server: true,
             port: 3010,
@@ -171,16 +171,16 @@ gulp.task('styleguide:applystyles', function() {
 // Uncomment and replace the current task bellow if you need a style guide generated when you run 'gulp'.
 // Style guide will be served on port: 3010.
 
-// gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
+gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 // Default tasks with styleguide.
-// gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
-// gulp.watch("scss/**/*.scss", ['sass', 'styleguide']);
-// gulp.watch("scripts/**/*.js", ['js']);
-// });
+gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
+gulp.watch("src/scss/**/*.scss", ['sass', 'styleguide']);
+gulp.watch("js/**/*.js", ['js']);
+});
 
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'browser-sync'], function() {
-    gulp.watch("scss/**/*.scss", ['sass']);
-    gulp.watch("scripts/**/*.js", ['js']);
+    gulp.watch("src/sass/**/*.scss", ['sass']);
+    gulp.watch("js/**/*.js", ['js']);
 });

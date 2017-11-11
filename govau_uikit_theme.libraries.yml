@@ -12,7 +12,7 @@ font-awesome:
 govau_uikit_theme-libraries:
   css:
     theme:
-      css/main.css: {}
+      css/styles/main.css: {}
   js:
     src/govau.uikit/animate/lib/js/module.js: {}
     src/govau.uikit/accordion/lib/js/module.js: {}

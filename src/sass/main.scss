@@ -1,5 +1,60 @@
 // OVERWRITES
 
-// UI-Kit
-@import 'uikit';
+
+//@import "sass-versioning/dist/_index.scss";
+
+//Overide variables from here;
+@import "variables";
+
+//@import "../govau.uikit/core/lib/sass/_module.scss";
+//@import "../govau.uikit/animate/lib/sass/_module.scss";
+//@import "../govau.uikit/accordion/lib/sass/_module.scss";
+//@import "../govau.uikit/body/lib/sass/_module.scss";
+//@import "../govau.uikit/link-list/lib/sass/_module.scss";
+//@import "../govau.uikit/breadcrumbs/lib/sass/_module.scss";
+//@import "../govau.uikit/buttons/lib/sass/_module.scss";
+//@import "../govau.uikit/callout/lib/sass/_module.scss";
+//@import "../govau.uikit/control-input/lib/sass/_module.scss";
+//@import "../govau.uikit/cta-link/lib/sass/_module.scss";
+//@import "../govau.uikit/direction-links/lib/sass/_module.scss";
+//@import "../govau.uikit/footer/lib/sass/_module.scss";
+//@import "../govau.uikit/grid-12/lib/sass/_module.scss";
+//@import "../govau.uikit/header/lib/sass/_module.scss";
+//@import "../govau.uikit/headings/lib/sass/_module.scss";
+//@import "../govau.uikit/inpage-nav/lib/sass/_module.scss";
+//@import "../govau.uikit/keyword-list/lib/sass/_module.scss";
+//@import "../govau.uikit/page-alerts/lib/sass/_module.scss";
+//@import "../govau.uikit/progress-indicator/lib/sass/_module.scss";
+//@import "../govau.uikit/responsive-media/lib/sass/_module.scss";
+//@import "../govau.uikit/select/lib/sass/_module.scss";
+//@import "../govau.uikit/skip-link/lib/sass/_module.scss";
+//@import "../govau.uikit/tags/lib/sass/_module.scss";
+//@import "../govau.uikit/text-inputs/lib/sass/_module.scss";
+
+@import "../../pancake/sass/pancake";
+
+@import "body";
+@import "search";
+@import "reset";
+@import "views-exposed-form";
+@import "views";
+@import "header";
+@import "content-lists";
+@import "floating-block";
+@import "site-logo";
+@import "branding";
+@import "buttons";
+@import "tabs";
+@import "content";
+@import "date";
+@import "comments";
+@import "icons";
+@import "breadcrumbs";
+@import "text-inputs";
+@import "tables";
+@import "footer";
+
+
+//@include versioning-check();
+
 
