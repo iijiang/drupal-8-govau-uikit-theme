@@ -14,12 +14,18 @@
  */
 #}
 {# block content #}
-    <div class="grids col-sm-6 asea-branding">
-      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
-          {#{% if site_logo %}#}
-          {#<img class="uikit-responsive-media-img" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />#}
-          {#{% else %}#}
-        <img class="uikit-responsive-media-img" src="/{{ directory }}/img/asea-crest_inline_x800.png" alt="{{ 'Australian Government - Asbestos Safety and Eradication Agency | Click to go to the home page'|t }}" />
-          {#{% endif %}#}
-      </a>
-    </div>
+  {% if site_logo %}
+      <div class="grids col-sm-6">
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+              <img class="uikit-responsive-media-img" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+          </a>
+      </div>
+  {% endif %}
+  {% if site_name %}
+      <div class="grids col-sm-4 col-sm-offset-2">
+          <h1 class="uikit-header-heading">
+              <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+          </h1>
+      </div>
+  {% endif %}
+{# endblock #}
