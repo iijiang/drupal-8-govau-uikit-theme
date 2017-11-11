@@ -4,17 +4,17 @@ table {
   margin: uikit-space(1) 0;
   width: 100%;
   font-size: .9em;
-  border-bottom: 2px solid $asea-purple;
+  border-bottom: 2px solid $purple;
   caption {
     text-align: left;
     margin:1em 0;
     font-weight: bold;
-    color: $asea-purple;
+    color: $purple;
   }
   th, td {
     text-align: left;
     padding: .8em;
-    border:1px solid $asea-purple;
+    border:1px solid $purple;
     &:first-child {
       border-left:none;
     }
@@ -23,8 +23,8 @@ table {
     }
   }
   thead {
-    border-bottom: 2px solid $asea-purple;
-    border-top: 2px solid $asea-purple;
+    border-bottom: 2px solid $purple;
+    border-top: 2px solid $purple;
   }
   tbody {
     background-color: #fff;
@@ -48,14 +48,14 @@ table {
         left: .2em;
         font-size: .8em;
         margin-top: .3em;
-        color:$asea-purple;
+        color:purple;
         }
       }
     }
   }
   tr.table-total {
-    background-color: $asea-grey;
-    border-top: 2px solid $asea-purple;
+    background-color: $grey;
+    border-top: 2px solid $purple;
     font-weight: bold;
   }
   tfoot {
