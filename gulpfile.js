@@ -141,13 +141,13 @@ gulp.task('browser-sync', function() {
 gulp.task('styleguide:generate', function() {
     return gulp.src('src/scss/**/*.scss')
         .pipe(styleguide.generate({
-            title: 'my Styleguide',
+            title: 'My Styleguide',
             overviewPath: 'README.md',
             server: true,
             port: 3010,
             // customColors: '/scss/utils/_styleguide_custom_variables.scss',
             // For static style guide. Generat relative to your environment:
-            // appRoot: '/themes/monoset/styleguide',
+            // appRoot: '/themes/drupal-8-govau-uikit-theme/styleguide',
             extraHead: [
                 '<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">',
             ],
@@ -159,7 +159,7 @@ gulp.task('styleguide:generate', function() {
 });
 
 gulp.task('styleguide:applystyles', function() {
-    return gulp.src('styleguide/main.scss')
+    return gulp.src('css/main.scss')
         .pipe(sass({
             errLogToConsole: true
         }))
@@ -180,7 +180,7 @@ gulp.watch("js/**/*.js", ['js']);
 });
 
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function() {
-    gulp.watch("src/sass/**/*.scss", ['sass']);
-    gulp.watch("js/**/*.js", ['js']);
-});
+// gulp.task('default', ['sass', 'browser-sync'], function() {
+//     gulp.watch("src/sass/**/*.scss", ['sass']);
+//     gulp.watch("js/**/*.js", ['js']);
+// });
