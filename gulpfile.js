@@ -174,13 +174,13 @@ gulp.task('styleguide:applystyles', function() {
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 // Default tasks with styleguide.
-gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
-gulp.watch("src/scss/**/*.scss", ['sass', 'styleguide']);
-gulp.watch("js/**/*.js", ['js']);
-});
+// gulp.task('default', ['sass', 'browser-sync', 'styleguide'], function() {
+// gulp.watch("src/scss/**/*.scss", ['sass', 'styleguide']);
+// gulp.watch("js/**/*.js", ['js']);
+// });
 
 // Default task to be run with `gulp`
-// gulp.task('default', ['sass', 'browser-sync'], function() {
-//     gulp.watch("src/sass/**/*.scss", ['sass']);
-//     gulp.watch("js/**/*.js", ['js']);
-// });
+gulp.task('default', ['sass', 'browser-sync'], function() {
+    gulp.watch("src/sass/**/*.scss", ['sass']);
+    gulp.watch("js/**/*.js", ['js']);
+});
