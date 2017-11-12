@@ -139,7 +139,7 @@ gulp.task('browser-sync', function() {
 
 // Styleguide Generator with SC5: https://github.com/SC5/sc5-styleguide
 gulp.task('styleguide:generate', function() {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('src/sass/**/*.scss')
         .pipe(styleguide.generate({
             title: 'My Styleguide',
             overviewPath: 'README.md',
@@ -159,7 +159,7 @@ gulp.task('styleguide:generate', function() {
 });
 
 gulp.task('styleguide:applystyles', function() {
-    return gulp.src('css/main.scss')
+    return gulp.src('src/sass/main.scss')
         .pipe(sass({
             errLogToConsole: true
         }))
