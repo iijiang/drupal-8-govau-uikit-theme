@@ -5,7 +5,7 @@ if (!this.Promise) {
     var Promise = require('es6-promise').Promise;
 }
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
+var $ = require('gulp-load-plugins')(); //postRequireTransforms
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var styleguide = require('sc5-styleguide');
