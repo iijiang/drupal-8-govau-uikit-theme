@@ -113,7 +113,7 @@ gulp.task('drush', function() {
         read: false
     })
         .pipe($.shell([
-            'drush cc css-js',
+            'drush cr css-js',
         ]))
         .pipe($.notify({
             title: "Caches cleared",
