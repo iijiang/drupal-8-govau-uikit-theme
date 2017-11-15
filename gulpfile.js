@@ -126,14 +126,14 @@ gulp.task('drush', function() {
 gulp.task('browser-sync', function() {
     //watch files
     var files = [
-        'styles/main.css',
+        'css/main.css',
         'js/**/*.js',
         'img/**/*',
         'templates/**/*.twig'
     ];
     //initialize browsersync
     browserSync.init(files, {
-        proxy: "ds2017.loc.gbuild.net" // BrowserSync proxy, change to match your local environment
+        proxy: "drupalvm.test" // BrowserSync proxy, change to match your local environment
     });
 });
 
@@ -145,9 +145,6 @@ gulp.task('styleguide:generate', function() {
             overviewPath: 'README.md',
             server: true,
             port: 3010,
-            // customColors: '/scss/utils/_styleguide_custom_variables.scss',
-            // For static style guide. Generat relative to your environment:
-            // appRoot: '/themes/drupal-8-govau-uikit-theme/styleguide',
             extraHead: [
                 '<link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">',
             ],
